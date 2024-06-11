@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/welcomeTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi!"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeTextView2"
+        app:layout_constraintStart_toStartOf="@+id/welcomeTextView2" />
+
+    <TextView
+        android:id="@+id/welcomeTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:hint="账号"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView2" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:hint="密码"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameEditText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:hint="邮箱"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/sendVerificationCodeButton"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:text="发送"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/verificationCodeEditText"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:hint="验证码"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="342dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/press_effect"
+        android:text="登录"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCodeEditText" />
+
+    <TextView
+        android:id="@+id/haveAccountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Have an account ?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/registerTextView"
+        app:layout_constraintEnd_toStartOf="@+id/registerTextView"
+        app:layout_constraintTop_toTopOf="@+id/registerTextView" />
+
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Click this"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
